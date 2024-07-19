@@ -1,0 +1,365 @@
+/* MailChimp for WP styles
+----------------------------------------------------------------- */
+
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+.mc4wp-form {
+
+	// Common styles
+	width: 100%;
+	transition: all .5s;
+	
+	body:not(.elementor-editor-active) & {
+		opacity: 0;
+		&.inited {
+			opacity: 1;
+		}
+	}
+	
+	.email-label {
+		@include font(1.2857rem, '', 700);
+		color: var(--theme-color-text_dark);
+		display: block;
+		margin-bottom: 0.85em;
+	}
+	.email-label,
+	.policy-label {
+		display: block;
+	}
+	input[type="email"] {
+		width: 100%;
+	}
+
+	.trx_addons_message_box,
+	.mc4wp-response {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 0;
+		text-align: center;
+	}
+	
+	.mc4wp-response,
+	.trx_addons_message_box  {
+		p:last-child {
+			margin-bottom: 0!important;
+		}
+	}
+
+	.mc4wp-response {
+		-moz-animation: mc4wpResponseHide 0s ease-in 7s forwards;
+		/* Firefox */
+		-webkit-animation: mc4wpResponseHide 0s ease-in 7s forwards;
+		/* Safari and Chrome */
+		-o-animation: mc4wpResponseHide 0s ease-in 7s forwards;
+		/* Opera */
+		animation: mc4wpResponseHide 0s ease-in 7s forwards;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		z-index: 1;
+	}
+	@keyframes mc4wpResponseHide {
+		to {
+			width:0;
+			height:0;
+			opacity: 0;
+			pointer-events: none;
+			overflow:hidden;
+		}
+	}
+	@-webkit-keyframes mc4wpResponseHide {
+		to {
+			width:0;
+			height:0;
+			opacity: 0;
+			pointer-events: none;
+			visibility:hidden;
+		}
+	}
+	
+	input[type="email"],
+	input[type="number"],
+	input[type="text"],
+	input[type="url"],
+	select {
+		@include theme_field_template;
+		@include theme_field_colors;
+	}
+	input[type="email"]:focus,
+	input[type="email"]:hover,
+	input[type="number"]:focus,
+	input[type="number"]:hover,
+	input[type="text"]:focus,
+	input[type="text"]:hover,
+	input[type="url"]:focus,
+	input[type="url"]:hover,
+	select:focus,
+	select:hover {
+		@include theme_field_colors_hover;
+	}
+	input[type=email]:focus,
+	input[type=number]:focus,
+	input[type=text]:focus,
+	input[type=url]:focus,
+	select:focus {
+		outline: none;
+	}
+	button:not(.sc_button_simple) {
+		min-height: initial;
+	    padding: 14px 0 14px 0;
+	    width: 100%;
+	}
+	.mailchimp-eu-compliance-label {
+		margin-bottom: 0;
+	}
+
+	// Mailchimp form style 1
+	&#style-1 {
+		.email-label {
+			margin-bottom: 10px;
+		}
+		input[type=email] {
+			margin-bottom: 0;
+			padding: 14px 30px;
+			text-align: center;
+		}
+		.policy-label {
+			margin-top: 2.3em;
+		}
+		input[type="checkbox"] + .mailchimp-eu-compliance-label {
+			font-size: 13px;
+			letter-spacing: -0.01em;
+		}
+	}
+
+	// Mailchimp form style 2 & without style id
+	&#style-2,
+	&:not([id*="style-"]) {
+		position: relative;
+		input[type="email"] {
+			width: 100%;
+			@include border-sharp;
+			font-size: 15px;
+			margin-bottom: 0;
+			border-width: 0 0 2px;
+			padding: 14px 10em 17px 0;
+			background-color: transparent;
+		}
+		input[type="email"]:hover,
+		input[type="email"]:focus {
+			background-color: transparent;
+		}
+		button.sc_button_simple {
+			@include abs-rt(0, -1px);
+			margin: 0;
+			min-height: auto;
+			padding: 0;
+			width: auto;
+		}
+		input[type="checkbox"] + .mailchimp-eu-compliance-label {
+			color: var(--theme-color-input_light);
+		}
+	}
+
+	// Mailchimp form style 3
+	&#style-3 {
+		max-width: 546px;
+	}
+
+	// Mailchimp form style 3 and 5
+	&#style-3,
+	&#style-5 {
+		margin: auto;
+		width: 100%;
+		position: relative;
+		input[type="email"] {
+			border-color: var(--theme-color-input_bg_color);
+			margin-bottom: 8px;
+			padding-right: 13em;
+		}
+		input[type="email"]:hover,
+		input[type="email"]:focus {
+			border-color: var(--theme-color-input_bd_hover);
+		}
+		button.sc_button_simple {
+			@include abs-rt(1.9em, 3px);
+			margin: 0;
+			min-height: auto;
+			overflow: visible;
+			padding: 0 0 0 1.25em;
+			width: auto;
+			font-size: 14px;
+			letter-spacing: 0.06em;
+		}
+		button.sc_button_simple:before {
+			background-color: var(--theme-color-input_bd_hover);
+			content: '';
+			display: block !important;
+			height: 2.2em;
+			left: 0;
+			margin-top: -1.1em;
+			opacity: 1;
+			right: auto;
+			width: 1px;
+		}
+		button.sc_button_simple.sc_button_icon_left .sc_button_icon {
+			font-size: 1.3em;
+			margin-right: 0.2em;
+			line-height: 1em;
+		}
+		.policy-label {
+			text-align: center;
+		}
+		input[type="checkbox"] + .mailchimp-eu-compliance-label {
+			color: var(--theme-color-input_light);
+		}
+	}
+
+	// Mailchimp form style 4
+	&#style-4 {
+		position: relative;
+		input[type="email"] {
+			@include border-sharp;
+			border-width: 0 0 2px;
+			font-size: 14px;
+			margin-bottom: 0;
+			padding: 14px 0;
+    		width: calc(100% - 140px - 13%);
+			background-color: transparent;
+			border-color: var(--theme-color-text_dark);
+		}
+		input[type="email"]:hover,
+		input[type="email"]:focus {
+			background-color: transparent;
+		}
+		button.sc_button_simple {
+			@include abs-rt(0, 21px);
+			margin: 0;
+			min-height: auto;
+			padding: 0;
+			width: auto;
+		    font-size: 18px;
+		    text-transform: none;
+		    letter-spacing: 0;
+		}
+		button.sc_button_simple .sc_button_icon {
+		    font-size: 25px;
+		    width: 24px;
+		}
+		input[type="checkbox"] + .mailchimp-eu-compliance-label {
+			color: var(--theme-color-input_light);
+		}
+
+		.trx_addons_message_box,
+		.mc4wp-response {
+			left: 0;
+			transform: none;
+		}
+	}
+
+	// Mailchimp form style 5
+	&#style-5 {
+		input[type="email"] {
+			border-color: var(--theme-color-input_bd_color);
+		}
+		input[type="email"]:hover,
+		input[type="email"]:focus {
+			border-color: var(--theme-color-input_bd_hover);
+		}
+	}
+
+	// Mailchimp form style 6
+	&#style-6 {
+		.email-label {
+			margin-bottom: 10px;
+		}
+		input[type=email] {
+			margin-bottom: 0;
+			padding: 14px 30px;
+			text-align: center;
+		}
+		.mailchimp-eu-compliance-label {
+			margin-top: 1em;
+		}
+		input[type="checkbox"] + .mailchimp-eu-compliance-label {
+			font-size: 13px;
+			letter-spacing: -0.01em;
+		}
+	}
+}
+
+// In the popup
+.adp-popup {
+	.adp-popup-content {
+		position: relative;
+	}
+	.mc4wp-form {
+		.trx_addons_message_box,
+		.mc4wp-response {
+			bottom: 5px;
+		}
+		
+		&#style-6 {
+			.trx_addons_message_box,
+			.mc4wp-response {
+				left: 5px;
+				right: 5px;
+				transform: none;
+			}
+		}
+	}
+}
+
+.widget_title ~ .mc4wp-form {
+    margin-top: -1.25em;
+}
+
+// Mailchimp form style 2 and 3 in the footer
+.footer_wrap {
+
+	/* Form 2 */
+	#style-2 {
+		.email-label {
+			position: relative;
+			margin-bottom: 1.52em;
+		}
+		.email-label:after {
+			content: '';
+			width: 0;
+			height: 2px;
+			@include abs-lb();
+			@include transition_all(.3s);
+			background-color: var(--theme-color-input_bd_color);
+		}
+		.email-label:hover:after {
+		    background-color: var(--theme-color-input_bd_hover);
+		}
+		.email-label.webbloger_animation_width:after {
+			animation: 3s ease 1s animation_width forwards;
+		}
+		input[type="email"] {
+			margin-bottom: 0;
+			border: 0!important;
+		}
+	}
+
+	/* Form 3 */
+	#style-3 .email-label {
+		margin-bottom: 1.5em;
+	}
+
+	#style-3 input[type="checkbox"] + .mailchimp-eu-compliance-label {
+	    font-size: 1rem;
+	}
+	.mc4wp-form#style-2,
+	.mc4wp-form#style-3 {
+		button.sc_button_simple {
+			font-size: 14px;
+			text-transform: none;
+			letter-spacing: 0;
+		}
+	}
+}
