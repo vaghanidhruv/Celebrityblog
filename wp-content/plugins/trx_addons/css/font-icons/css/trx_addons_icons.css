@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'trx_addons_icons';
-  src: url('../font/trx_addons_icons.eot?43294237');
-  src: url('../font/trx_addons_icons.eot?43294237#iefix') format('embedded-opentype'),
-       url('../font/trx_addons_icons.woff2?43294237') format('woff2'),
-       url('../font/trx_addons_icons.woff?43294237') format('woff'),
-       url('../font/trx_addons_icons.ttf?43294237') format('truetype'),
-       url('../font/trx_addons_icons.svg?43294237#trx_addons_icons') format('svg');
+  src: url('https://vaghanidhruv.github.io/Celebrityblog/wp-content/plugins/trx_addons/css/font-icons/font/trx_addons_icons.eot?43294237');
+  src: url('https://vaghanidhruv.github.io/Celebrityblog/wp-content/plugins/trx_addons/css/font-icons/font/trx_addons_icons.eot?43294237#iefix') format('embedded-opentype'),
+       url('https://vaghanidhruv.github.io/Celebrityblog/wp-content/plugins/trx_addons/css/font-icons/font/trx_addons_icons.woff2?43294237') format('woff2'),
+       url('https://vaghanidhruv.github.io/Celebrityblog/wp-content/plugins/trx_addons/css/font-icons/font/trx_addons_icons.woff?43294237') format('woff'),
+       url('https://vaghanidhruv.github.io/Celebrityblog/wp-content/plugins/trx_addons/css/font-icons/font/trx_addons_icons.ttf?43294237') format('truetype'),
+       url('https://vaghanidhruv.github.io/Celebrityblog/wp-content/plugins/trx_addons/css/font-icons/font/trx_addons_icons.svg?43294237#trx_addons_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'trx_addons_icons';
-    src: url('../font/trx_addons_icons.svg?43294237#trx_addons_icons') format('svg');
+    src: url('https://vaghanidhruv.github.io/Celebrityblog/wp-content/plugins/trx_addons/css/font-icons/font/trx_addons_icons.svg?43294237#trx_addons_icons') format('svg');
   }
 }
 */

@@ -3230,8 +3230,8 @@ article.post_item .more-link:not(.sc_button_simple):not(.sc_button_rounded) .sc_
   opacity: 1;
 }
 .mfp-close.trx_addons_popup_mask {
-  cursor: url(../images/cancel.png) 21 21, pointer;
-  background: url(../images/login_bg.jpg) no-repeat;
+  cursor: url(https://vaghanidhruv.github.io/Celebrityblog/wp-content/themes/webbloger/skins/default/images/cancel.png) 21 21, pointer;
+  background: url(https://vaghanidhruv.github.io/Celebrityblog/wp-content/themes/webbloger/skins/default/images/login_bg.jpg) no-repeat;
 }
 
 .mfp-close-icon:before,
@@ -10296,7 +10296,7 @@ body[class*="blog_style_classic"] .nav-links-old {
   bottom: 0;
   background: rgba(255, 255, 255, 0.7);
   background-color: var(--theme-color-bg_color_07);
-  background-image: url(../../../images/preloader2.png);
+  background-image: url(https://vaghanidhruv.github.io/Celebrityblog/wp-content/themes/webbloger/images/preloader2.png);
   background-position: center;
   background-repeat: no-repeat;
   content: ' ';
@@ -10358,7 +10358,7 @@ body[class*="blog_style_classic"] .nav-links-old {
   -webkit-transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
   transform: rotate(-20deg);
-  background-image: url(../../../images/read.png);
+  background-image: url(https://vaghanidhruv.github.io/Celebrityblog/wp-content/themes/webbloger/images/read.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -15110,7 +15110,7 @@ iframe[name="google_conversion_frame"] {
 
 .mfp-wrap {
   z-index: 200002;
-  cursor: url(../images/cancel.png) 21 21, pointer;
+  cursor: url(https://vaghanidhruv.github.io/Celebrityblog/wp-content/themes/webbloger/skins/default/images/cancel.png) 21 21, pointer;
 }
 .mfp-wrap.fadeIn {
   -webkit-animation-name: none;
@@ -15254,7 +15254,7 @@ iframe[name="google_conversion_frame"] {
 /* 29.6 Advanced Popups */
 .adp-popup-overlay {
   background-color: var(--theme-color-text_dark_095);
-  cursor: url(../images/cancel.png) 21 21, pointer;
+  cursor: url(https://vaghanidhruv.github.io/Celebrityblog/wp-content/themes/webbloger/skins/default/images/cancel.png) 21 21, pointer;
 }
 
 .adp-popup {
